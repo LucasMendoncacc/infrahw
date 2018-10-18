@@ -50,7 +50,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 --Short name: reg
-ENTITY Registrador IS
+ENTITY RegistradorEPC IS
 		PORT(
 			Clk		: IN  STD_LOGIC;						-- Clock do registrador
 			Reset	: IN  STD_LOGIC;						-- Reinicializa o conteudo do registrador
@@ -58,11 +58,11 @@ ENTITY Registrador IS
 			mux4out : IN  STD_LOGIC_vector (31 downto 0); -- Vetor de bits que possui a informação a ser carregada no registrador
 			EPCout	: OUT STD_LOGIC_vector (31 downto 0)	-- Vetor de bits que possui a informação já carregada no registrador
 		);
-END Registrador;
+END RegistradorEPC;
 
 -- Arquitetura que define comportamento do Registrador
 -- Simulation
-ARCHITECTURE behavioral_arch OF Registrador IS
+ARCHITECTURE behavioral_arch OF RegistradorEPC IS
 	begin
 -- Clocked process	
 	process (Clk, Reset)
